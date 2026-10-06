@@ -1,9 +1,10 @@
 @import url("standard.css");
 
+/* Top news links section */
 #top_news {
   display: flex;
   flex-direction: column;
-  margin: 0rem 4rem;
+  margin: 0rem 4rem 2rem;
   gap: 1.5rem;
 }
 
@@ -11,4 +12,32 @@
   font-size: 1.1rem;
   font-weight: 700;
   margin-top: 0.6rem;
+}
+
+/* Big news */
+.big_news h1,
+.big_news p {
+  margin: 1rem 4rem;
+}
+
+.big_news p {
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+
+/* Most read */
+#most_read {
+  margin: 2rem 4rem;
+  border-top: 1px solid var(--black);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#most_read h2 {
+  color: var(--red);
+}
+
+#most_read a {
+  font-size: 1.3rem;
 }
