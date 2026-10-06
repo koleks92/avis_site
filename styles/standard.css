@@ -134,3 +134,33 @@ footer span {
   font-size: 1.2rem;
   gap: 1.7rem;
 }
+
+/* TABLET */
+@media only screen and (min-width: 800px) {
+  footer {
+    gap: 1.2rem;
+  }
+
+  #open_times {
+    max-width: 90%;
+  }
+
+  #open_times ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  #open_times ul li:first-child {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #open_times ul li {
+    display: flex;
+  }
+}
+/* DESKTOP */
+@media only screen and (min-width: 1000px) {
+}
