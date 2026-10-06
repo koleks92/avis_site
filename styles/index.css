@@ -1,1 +1,14 @@
 @import url("standard.css");
+
+#top_news {
+  display: flex;
+  flex-direction: column;
+  margin: 0rem 4rem;
+  gap: 1.5rem;
+}
+
+#top_news figcaption {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0.6rem;
+}

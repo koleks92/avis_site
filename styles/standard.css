@@ -39,10 +39,18 @@ a {
   color: var(--black);
 }
 
+main {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem 0 2rem;
+}
+
 /* HEADER */
 
 header {
   position: fixed;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
@@ -95,9 +103,6 @@ a.active {
 
 /* FOOTER */
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
