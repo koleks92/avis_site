@@ -15,20 +15,26 @@
     <div id="wrapper">
       <!-- HEADER -->
       <header>
-        <a href="index.html">
-          <img id="logo" src="images/logo/logo.png" alt="iKobenhavn logo" />
-        </a>
-        <div id="burger_button">
-          <i class="fa-solid fa-bars"></i>
-        </div>
         <nav>
-          <a class="active" href="./index.html">NYHEDER</a>
-          <a href="debat.html">DEBAT</a>
-          <a href="politik.html">POLITIK</a>
-          <a href="sport.html">SPORT</a>
-          <a href="kultur.html">KULTUR</a>
-          <a href="begivenheder.html">BEGIVENHEDER</a>
-          <a href="abonnement.html">ABONNEMENT</a>
+          <a href="index.html">
+            <img id="logo" src="images/logo/logo.png" alt="iKobenhavn logo" />
+          </a>
+          <div id="burger_button">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div id="nav_links">
+            <a class="active" href="./index.html" data-title="NYHEDER"
+              >NYHEDER</a
+            >
+            <a href="debat.html" data-title="DEBAT">DEBAT</a>
+            <a href="politik.html" data-title="POLITIK">POLITIK</a>
+            <a href="sport.html" data-title="SPORT">SPORT</a>
+            <a href="kultur.html" data-title="KULTUR">KULTUR</a>
+            <a href="begivenheder.html" data-title="BEGIVENHEDER"
+              >BEGIVENHEDER</a
+            >
+            <a href="abonnement.html" data-title="ABONNEMENT">ABONNEMENT</a>
+          </div>
         </nav>
       </header>
       <!-- MAIN -->
@@ -69,7 +75,7 @@
             </figure>
           </a>
         </section>
-        <section class="big_news">
+        <section class="big_news" id="first_big_news">
           <picture>
             <source
               media="(min-width: 501px)"

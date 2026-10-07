@@ -4,7 +4,7 @@
   --black: #000000;
   --red: #e30613;
   --white: #ffffff;
-  --gray: #EEEEEE;
+  --gray: #eeeeee;
 }
 
 /* GENERAL */
@@ -15,7 +15,6 @@
 }
 
 body {
-  width: 100vw;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
   color: var(--black);
@@ -32,6 +31,7 @@ img {
   object-fit: contain;
   height: auto;
   display: block;
+  border-radius: 2px;
 }
 
 a {
@@ -44,7 +44,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 4rem auto;
-  max-width: 1440px;
+  max-width: 1000px;
 }
 
 /* HEADER */
@@ -84,10 +84,23 @@ header.active {
 }
 
 nav {
-  display: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 nav.active {
+  flex-direction: column;
+}
+
+#nav_links {
+  display: none;
+}
+
+#nav_links.active {
   display: flex;
   width: 100%;
   flex-direction: column;
@@ -137,7 +150,8 @@ footer span {
 }
 
 /* TABLET */
-@media only screen and (min-width: 800px) {
+
+@media only screen and (min-width: 600px) {
   footer {
     gap: 1.2rem;
   }
@@ -174,13 +188,28 @@ footer span {
     align-items: center;
   }
 
-  header nav {
+  header #nav_links {
     display: flex;
     align-items: center;
     width: 100%;
-    margin-left: 2rem;
     gap: clamp(1rem, 2vw, 2rem);
-    max-width: 1440px;
+    max-width: 1000px;
+  }
+
+  /* Magic for moving links on hover */
+  /* It creates invisible extra space for bold font */
+  header #nav_links a::before {
+    display: block;
+    content: attr(data-title);
+    font-weight: 700;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+
+  header #nav_links a:hover {
+    color: var(--red);
+    font-weight: 700;
   }
 
   header a {
