@@ -24,7 +24,6 @@ body {
 #wrapper {
   width: 100%;
   min-height: 100%;
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -42,9 +41,10 @@ a {
 
 main {
   display: flex;
-  display: flex;
   flex-direction: column;
-  margin: 4rem 0 4rem;
+  justify-content: center;
+  margin: 4rem auto;
+  max-width: 1440px;
 }
 
 /* HEADER */
@@ -189,5 +189,9 @@ footer span {
 
   header nav a:last-child {
     margin-left: auto;
+  }
+
+  main {
+    margin: 6rem auto;
   }
 }
