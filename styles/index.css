@@ -2,13 +2,16 @@
 
 /* Top news links section */
 #top_news {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-content: center;
+  align-items: top;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 0rem 4rem 2rem;
   gap: 1.5rem;
 }
 
 #top_news figcaption {
+  justify-self: end;
   font-size: 1.1rem;
   font-weight: 700;
   margin-top: 0.6rem;
