@@ -4,6 +4,7 @@
   --black: #000000;
   --red: #e30613;
   --white: #ffffff;
+  --gray: #EEEEEE;
 }
 
 /* GENERAL */
@@ -58,7 +59,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   padding: 0.8rem;
-  background-color: var(--white);
+  background-color: var(--gray);
 }
 
 header.active {
@@ -163,4 +164,30 @@ footer span {
 }
 /* DESKTOP */
 @media only screen and (min-width: 1000px) {
+  #burger_button {
+    display: none;
+  }
+
+  header {
+    justify-content: center;
+    height: 4rem;
+    align-items: center;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-left: 2rem;
+    gap: clamp(1rem, 2vw, 2rem);
+    max-width: 1440px;
+  }
+
+  header a {
+    font-size: 0.9rem;
+  }
+
+  header nav a:last-child {
+    margin-left: auto;
+  }
 }
