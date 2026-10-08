@@ -69,8 +69,38 @@ p {
   color: var(--dark-gray);
 }
 
+figure {
+  position: relative;
+}
+
 figure figcaption {
   display: none;
+}
+
+/* Slideshow */
+#img_slideshow {
+  aspect-ratio: 16 / 9; 
+  object-fit: cover;
+  object-position: center;
+}
+
+.button_slideshow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: clamp(2rem, 2.5vw, 4rem);
+  color: var(--white);
+  background-color: #000000aa;
+  border-radius: 50%;
+  padding: 0.2rem;
+}
+
+#button_left {
+  left: 2%;
+}
+
+#button_right {
+  right: 2%;
 }
 
 /* TABLET */
@@ -107,7 +137,7 @@ figure figcaption {
   }
 
   #header_img {
-    padding: 0
+    padding: 0;
   }
 
   iframe,
@@ -121,6 +151,14 @@ figure figcaption {
     margin-top: 0.5rem;
     color: var(--dark-gray);
     font-size: 0.8rem;
+  }
+
+  #button_left {
+    left: 5%;
+  }
+
+  #button_right {
+    right: 5%;
   }
 }
 /* DESKTOP */
@@ -136,14 +174,14 @@ figure figcaption {
 
   figure.main_sport {
     position: relative;
-    padding: 0
+    padding: 0;
   }
 
   figure.main_sport figcaption {
     position: absolute;
     bottom: 0;
     width: 20%;
-    left: 100%;           
+    left: 100%;
     right: auto;
   }
 
