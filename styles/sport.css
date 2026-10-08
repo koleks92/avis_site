@@ -18,7 +18,7 @@ h1,
 h2,
 h3,
 p {
-  margin: 1rem 1rem;
+  margin: 1rem;
 }
 
 p {
@@ -97,14 +97,23 @@ figure figcaption {
     text-align: center;
   }
 
+  #sport_header h1,
+  #sport_header h2 {
+    padding: 0 3rem;
+  }
 
   .main_sport {
     margin: 0 5rem;
+  }
+
+  #header_img {
     padding: 0
   }
 
-  figure {
-    padding: 1rem;
+  iframe,
+  img,
+  figcaption {
+    padding: 0 1rem;
   }
 
   figure figcaption {
@@ -113,9 +122,39 @@ figure figcaption {
     color: var(--dark-gray);
     font-size: 0.8rem;
   }
-
-
 }
 /* DESKTOP */
 @media only screen and (min-width: 1000px) {
+  .text_sport {
+    margin: 1rem 10rem 2rem;
+  }
+
+  #author_date {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+
+  figure.main_sport {
+    position: relative;
+    padding: 0
+  }
+
+  figure.main_sport figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    left: 100%;           
+    right: auto;
+  }
+
+  figure.main_sport:nth-of-type(even) figcaption {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+  }
+
+  figcaption {
+    margin: 0;
+    padding: 0;
+  }
 }
