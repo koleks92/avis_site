@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/abonnement-payment.css" />
+    <script
+      src="https://kit.fontawesome.com/01ed1881ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="scripts/burger.js" defer></script>
+    <script src="scripts/abonnement-payment.js" defer></script>
+
+    <title>Avis Site</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <!-- HEADER -->
+      <header>
+        <nav>
+          <a href="index.html">
+            <img id="logo" src="images/logo/logo.png" alt="iKobenhavn logo" />
+          </a>
+          <div id="burger_button">
+            <i class="fa-solid fa-bars"></i>
+          </div>
+          <div id="nav_links">
+            <a href="./index.html" data-title="NYHEDER">NYHEDER</a>
+            <a href="fake_link.html" data-title="DEBAT">DEBAT</a>
+            <a href="fake_link.html" data-title="POLITIK">POLITIK</a>
+            <a href="sport.html" data-title="SPORT">SPORT</a>
+            <a href="fake_link.html" data-title="KULTUR">KULTUR</a>
+            <a href="fake_link.html" data-title="BEGIVENHEDER">BEGIVENHEDER</a>
+            <a class="active" href="abonnement.html" data-title="ABONNEMENT"
+              >ABONNEMENT</a
+            >
+          </div>
+        </nav>
+      </header>
+      <!-- MAIN -->
+      <main>
+        <h1>Prøv iKøbenhavn gratis i 3 måneder</h1>
+        <section>
+          <h2>Abonnement</h2>
+          <p>
+            Abonnementet giver ubegrænset adgang til den digitale avis, samt
+            papiravisen tilsendt fredag og lørdag. Abonnementet er fortløbende
+            og fortsætter efter den første måned til normalpris.
+          </p>
+          <div id="price_div">
+            <div class="price_row">
+              <p>Normalpris</p>
+              <p>Price</p>
+            </div>
+            <div class="price_row">
+              <p>Rabat</p>
+              <p>Price</p>
+            </div>
+            <div class="price_row">
+              <p>Pris i alt</p>
+              <p>Price</p>
+            </div>
+          </div>
+          <p>
+            Tilbuddet gælder kun for husstande i Danmark, der ikke har abonneret
+            inden for de sidste 12 måneder.
+          </p>
+          <button type="submit" form="abonnement">Bestil</button>
+        </section>
+        <form action="" method="post" id="abonnement">
+          <div class="row">
+            <label for="email"
+              >Indtast din email<span class="req">*</span></label
+            >
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="row">
+            <label for="email2"
+              >Bekræft din email<span class="req">*</span></label
+            >
+            <input type="email" id="email2" name="email2" required />
+          </div>
+
+          <div class="row">
+            <label for="password"
+              >Vælg adgangskode<span class="req">*</span></label
+            >
+            <input type="password" id="password" name="password" required />
+          </div>
+
+          <div class="row">
+            <label for="password2"
+              >Bekræft koden<span class="req">*</span></label
+            >
+            <input type="password" id="password2" name="password2" required />
+          </div>
+
+          <div class="row">
+            <label for="fornavn">Fornavn<span class="req">*</span></label>
+            <input type="text" id="fornavn" name="fornavn" required />
+          </div>
+
+          <div class="row">
+            <label for="efternavn">Efternavn<span class="req">*</span></label>
+            <input type="text" id="efternavn" name="efternavn" required />
+          </div>
+
+          <div class="row">
+            <label for="telefon">Telefon<span class="req">*</span></label>
+            <input type="tel" id="telefon" name="telefon" required />
+          </div>
+
+          <div class="row">
+            <label for="adresse">Adresse<span class="req">*</span></label>
+            <input type="text" id="adresse" name="adresse" required />
+          </div>
+
+          <div class="row">
+            <label for="post">Post<span class="req">*</span></label>
+            <input type="number" id="post" name="post" required />
+          </div>
+
+          <div class="row">
+            <label for="by">By<span class="req">*</span></label>
+            <input type="text" id="by" name="by" required />
+          </div>
+          <div class="row">
+            <div class="check">
+              <input type="checkbox" id="nyheder" name="nyheder" />
+              <label for="nyheder">
+                Jeg vil gerne modtage dagens vigtigste nyheder som udsendes hver
+                morgen på mail
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="check">
+              <input type="checkbox" id="tilbud" name="tilbud" />
+              <label for="tilbud">
+                Jeg vil gerne modtage relevante tilbud samt info om
+                begivenheder, debatter m.m.
+              </label>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="check">
+              <input type="checkbox" id="vilkar" name="vilkar" required />
+              <label for="vilkar">
+                Jeg accepterer Dagbladet Informations produktvilkår
+                <span class="req">*</span>
+              </label>
+            </div>
+          </div>
+          <button type="submit">Bestil</button>
+        </form>
+      </main>
+      <!-- FOOTER -->
+      <footer>
+        <p>
+          iKøbenhavn | Københavnvej 151 | 2300 København S | Tlf. 30 55 30 44 |
+          ikøbenhavn@mail.dk
+        </p>
+        <div id="open_times">
+          <ul>
+            <li>Åbningstider:</li>
+            <li>Mandag: 9.00-17.00</li>
+            <li>Tirsdag 9.00-14.00</li>
+            <li>Onsdag: 10.00-14.00</li>
+            <li>Torsdag: 10.00-14.00</li>
+            <li>Fredag, lørdag, søndag: Lukket</li>
+          </ul>
+        </div>
+        <p>
+          "Dette er en skoleopgave lavet på Next Uddannelse København/Medie"
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

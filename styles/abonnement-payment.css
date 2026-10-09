@@ -1,0 +1,208 @@
+@import url("standard.css");
+
+main form {
+  background-color: var(--gray);
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0.5rem 1rem;
+}
+
+main section {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0.5rem 1rem;
+}
+
+h1 {
+  display: none;
+}
+/* Section */
+section p {
+  line-height: 1.4;
+}
+
+#price_div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.price_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#price_div div:last-child {
+  font-weight: 700;
+}
+
+section button {
+  margin-top: 1rem;
+}
+
+/* Form */
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  line-height: 28px;
+}
+
+.row label {
+  justify-self: start;
+  font-size: 1.1rem;
+}
+
+.row input {
+  border: none;
+  background-color: white;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+}
+
+.req {
+  color: red;
+  margin: 0.5rem;
+}
+
+/* Checkboxes */
+form div:nth-last-of-type(3) {
+  margin-top: 1rem;
+}
+
+form,
+div:nth-last-of-type(1) {
+  margin-bottom: 1rem;
+}
+
+.check {
+  grid-column: 2 / -1;
+  grid-row: 1 / -1;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.check input {
+  grid-column: auto;
+  justify-self: flex-start;
+  align-self: flex-start;
+  background-color: transparent;
+  margin-top: 7px;
+}
+
+.check label {
+  justify-self: auto;
+  grid-column: auto;
+}
+
+/* Buttons */
+button {
+  color: var(--white);
+  background-color: var(--red);
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 150px;
+  justify-self: center;
+}
+
+/* TABLET */
+@media only screen and (min-width: 800px) {
+  h1 {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  main section {
+    margin: 1rem 4rem 1rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  main {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    font-size: 4rem;
+  }
+
+  main section {
+    grid-column: 2 / -1;
+    grid-row: 2 / 3;
+    background-color: var(--gray);
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+#price_div {
+    font-size: 1.1rem;
+    gap: 1rem;
+}
+
+#price_div div:last-of-type {
+    font-size: 1.2rem;
+}
+
+
+  main form {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 2rem 1rem;
+  }
+
+  main form button {
+    display: none;
+  }
+
+
+  .row label {
+    justify-self: end;
+    align-self: center;
+    grid-column: 1 / 2;
+    font-size: 0.9rem;
+
+  }
+
+  .row input {
+    grid-column: 2 / -1;
+  }
+
+  .check label {
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+  }
+
+  .check {
+    margin-bottom: 0 !important;
+  }
+
+  section > p {
+    font-size: 0.9rem;
+  }
+
+
+}
