@@ -44,7 +44,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 4rem auto;
+  margin: 3rem auto;
   max-width: 1000px;
 }
 
