@@ -61,7 +61,7 @@ ul {
   margin-bottom: 1rem;
 }
 
-button {
+.abonnement a, #student_abonnement a {
   color: var(--white);
   background-color: var(--red);
   padding: 1rem;
@@ -69,6 +69,7 @@ button {
   font-weight: 700;
   border: none;
   border-radius: 8px;
+  text-align: center;
 }
 /* To make sure that "0" is centered first */
 .suffix {
@@ -94,7 +95,7 @@ button {
   margin-bottom: 1rem;
 }
 
-#student_abonnement button {
+#student_abonnement a {
   font-size: 1.2rem;
   font-weight: 500;
 }
