@@ -75,8 +75,7 @@ form div:nth-last-of-type(3) {
   margin-top: 1rem;
 }
 
-form,
-div:nth-last-of-type(1) {
+form div:nth-last-of-type(1) {
   margin-bottom: 1rem;
 }
 
@@ -156,17 +155,16 @@ button {
     flex-direction: column;
     justify-content: space-evenly;
     gap: 2rem;
-}
+  }
 
-#price_div {
+  #price_div {
     font-size: 1.1rem;
     gap: 1rem;
-}
+  }
 
-#price_div div:last-of-type {
+  #price_div div:last-of-type {
     font-size: 1.2rem;
-}
-
+  }
 
   main form {
     grid-column: 1 / 2;
@@ -178,13 +176,11 @@ button {
     display: none;
   }
 
-
   .row label {
     justify-self: end;
     align-self: center;
     grid-column: 1 / 2;
     font-size: 0.9rem;
-
   }
 
   .row input {
@@ -203,6 +199,4 @@ button {
   section > p {
     font-size: 0.9rem;
   }
-
-
 }
