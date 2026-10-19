@@ -215,6 +215,6 @@ button, main a {
   #write_to_us {
     grid-column: 1 / -1;
     background-color: var(--gray);
-    margin: 1rem 0
+    margin: 1rem 10rem;
   }
 }
