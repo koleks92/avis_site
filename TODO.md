@@ -13,7 +13,6 @@ Abonnement-payment:
     - Form validation ( JS )
     - Links to the "Thank you page"
     - Styling
-    - Header styling bug 
 
 Abonnement-tak:
     - Missing the whole page
