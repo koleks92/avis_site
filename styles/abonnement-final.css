@@ -1,0 +1,70 @@
+@import url("standard.css");
+
+main section {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0.5rem 1rem;
+}
+
+#title {
+    margin-top: 2rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Buttons */
+main a {
+  color: var(--white);
+  background-color: var(--red);
+  padding: 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 150px;
+  justify-self: center;
+}
+
+/* Skriv til os */
+#write_to_us {
+    margin: 1rem 2rem;
+}
+#write_to_us p {
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+#write_to_us a {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* TABLET */
+@media only screen and (min-width: 800px) {
+  h1 {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  main section {
+    margin: 1rem 4rem 1rem;
+  }
+
+  .row {
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #write_to_us {
+    grid-column: 1 / -1;
+    background-color: var(--gray);
+    margin: 1rem 10rem;
+  }
+}
