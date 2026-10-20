@@ -29,12 +29,13 @@ if (abonnement === "digital") {
   totalPrice.innerHTML = "0,00";
 }
 
-// Validation
+// Form values
 const email = document.querySelector("#email");
 const email2 = document.querySelector("#email2");
 const password = document.querySelector("#password");
 const password2 = document.querySelector("#password2");
 
+// Validation
 const validate = () => {
   // Emails matching
   if (email.value !== email2.value) {
@@ -45,7 +46,6 @@ const validate = () => {
 
   // Password length
   if (password.value.length < 8) {
-    console.log(password.value.length);
     password.setCustomValidity("Password is too short. Minimum 8 characters!");
   } else {
     password.setCustomValidity("");
@@ -62,3 +62,19 @@ const validate = () => {
 [email, email2, password, password2].forEach((selector) => {
   selector.addEventListener("input", validate);
 });
+
+// Submit with backend
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (e) => handleSubmit(e));
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  const res = await fetch("http://localhost:3000/submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email }), // your form values
+  });
+};
