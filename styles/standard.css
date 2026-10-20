@@ -2,7 +2,7 @@
 
 :root {
   --black: #000000;
-  --dark-gray: #66665F;
+  --dark-gray: #66665f;
   --red: #e30613;
   --white: #ffffff;
   --gray: #eeeeee;
@@ -22,8 +22,10 @@ body {
 }
 
 #wrapper {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
   margin: 0 auto;
 }
 

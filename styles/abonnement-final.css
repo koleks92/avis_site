@@ -1,5 +1,9 @@
 @import url("standard.css");
 
+main {
+  flex: 1;
+}
+
 main section {
   display: grid;
   gap: 0.5rem;
@@ -8,7 +12,7 @@ main section {
 }
 
 #title {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 h1 {
@@ -31,7 +35,7 @@ main a {
 
 /* Skriv til os */
 #write_to_us {
-    margin: 1rem 2rem;
+  margin: 1rem 2rem;
 }
 #write_to_us p {
   font-size: 1.1rem;
@@ -62,9 +66,13 @@ main a {
 }
 
 @media only screen and (min-width: 1000px) {
+  h1 {
+    font-size: 3rem;
+  }
+
   #write_to_us {
     grid-column: 1 / -1;
     background-color: var(--gray);
-    margin: 1rem 10rem;
+    margin: 2rem 10rem;
   }
 }

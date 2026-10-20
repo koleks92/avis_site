@@ -61,7 +61,8 @@ ul {
   margin-bottom: 1rem;
 }
 
-.abonnement a, #student_abonnement a {
+.abonnement a,
+#student_abonnement a {
   color: var(--white);
   background-color: var(--red);
   padding: 1rem;
@@ -118,11 +119,13 @@ ul {
 @media only screen and (min-width: 1000px) {
   main {
     padding: 0;
+    width: 100%;
   }
 
   #abonnements {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
+
   .abonnement {
     width: auto;
   }
@@ -131,5 +134,4 @@ ul {
     flex: 1;
     justify-content: space-between;
   }
-
 }
