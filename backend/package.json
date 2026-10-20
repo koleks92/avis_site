@@ -1,5 +1,17 @@
 {
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Server for avis-site",
+  "license": "ISC",
+  "author": "koleks92",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
   "dependencies": {
     "express": "^5.3.0"
-  }
+  },
+  "devDependencies": {}
 }
