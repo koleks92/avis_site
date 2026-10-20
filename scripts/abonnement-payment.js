@@ -1,3 +1,4 @@
+// Get info from the URL
 const params = new URLSearchParams(document.location.search);
 const abonnement = params.get("abo");
 
@@ -17,12 +18,12 @@ if (abonnement === "digital") {
   rabatPrice.innerHTML = "315,00";
   totalPrice.innerHTML = "0,00";
 } else if (abonnement === "fuldt") {
-  nameAbo.innerHTML = "Digital";
+  nameAbo.innerHTML = "Fuldt abonnement";
   normalPrice.innerHTML = "440,00";
   rabatPrice.innerHTML = "440,00";
   totalPrice.innerHTML = "0,00";
 } else if (abonnement === "student") {
-  nameAbo.innerHTML = "Digital";
+  nameAbo.innerHTML = "Student";
   normalPrice.innerHTML = "99,00";
   rabatPrice.innerHTML = "99,00";
   totalPrice.innerHTML = "0,00";
