@@ -72,9 +72,13 @@ form.addEventListener("submit", (e) => handleSubmit(e));
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  const res = await fetch("http://localhost:3000/submit", {
+  const res = await fetch("/submit", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name, email }), // your form values
+    body: JSON.stringify({ fornavn, email }), // your form values
   });
+
+  if (res.ok) {
+    console.log("test");
+  }
 };

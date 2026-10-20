@@ -1,12 +1,13 @@
 const express = require("express");
-const cors = require("cors");
 const app = express();
 
-app.use(cors({ origin: "http://localhost:5299" })); // your frontend's address and port
+// Serve public/static files
+app.use(express.static("public"));
+
 app.use(express.json());
 
 app.post("/submit", (req, res) => {
-  const { name, email } = req.body;
+  const { fornavn, email } = req.body;
 
   if (!name || !email) {
     return res.status(400).json({ ok: false, error: "Missing fields" });
