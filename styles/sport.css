@@ -1,5 +1,10 @@
 @import url("standard.css");
 
+/* General */
+.paragraph_main {
+  margin-bottom: 1rem;
+}
+
 /* GOOGLE MAPS */
 
 #google_maps {
@@ -15,11 +20,13 @@
 }
 
 /* Mulltiselector / General */
-#sport_header, .text_sport {
+#sport_header,
+.text_sport {
   margin: 1rem 2rem 2rem;
 }
 
-.text_sport h2, .text_sport h3 {
+.text_sport h2,
+.text_sport h3 {
   margin: 0.5rem 0;
 }
 
@@ -109,7 +116,7 @@ figure figcaption {
 
 /* TABLET */
 @media only screen and (min-width: 800px) {
-  .main_sport{
+  .main_sport {
     margin: 1rem 5rem;
     padding: 0rem 2rem;
   }
@@ -142,8 +149,6 @@ figure figcaption {
   #sport_header h2 {
     padding: 0 3rem;
   }
-
-
 
   #header_img {
     padding: 0;
