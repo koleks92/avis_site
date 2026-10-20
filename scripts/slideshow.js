@@ -46,6 +46,11 @@ img.addEventListener("pointerdown", (e) => {
   initialX = e.clientX;
 });
 
+img.addEventListener("pointerup", (e) => {
+  // Stop/Do not allow movement
+  move = false;
+});
+
 img.addEventListener("pointermove", (e) => {
   // If not pressed, dont allow
   if (!move) return;
@@ -64,7 +69,3 @@ img.addEventListener("pointermove", (e) => {
   }
 });
 
-img.addEventListener("pointerup", (e) => {
-  // Stop/Do not allow movement
-  move = false;
-});
