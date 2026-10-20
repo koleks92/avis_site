@@ -108,7 +108,14 @@
 
           <div class="row">
             <label for="telefon">Telefon<span class="req">*</span></label>
-            <input type="tel" id="telefon" name="telefon" required />
+            <input
+              type="tel"
+              id="telefon"
+              name="telefon"
+              required
+              pattern="(\+45)?\s?\d{8}"
+              title="8 cifre, fx 12345678"
+            />
           </div>
 
           <div class="row">
@@ -118,7 +125,14 @@
 
           <div class="row">
             <label for="post">Post<span class="req">*</span></label>
-            <input type="number" id="post" name="post" required />
+            <input
+              type="number"
+              id="post"
+              name="post"
+              required
+              min="1000"
+              max="9999"
+            />
           </div>
 
           <div class="row">

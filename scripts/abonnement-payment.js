@@ -1,4 +1,4 @@
-// Get info from the URL
+// Get info from the URL and change the values in the HTML
 const params = new URLSearchParams(document.location.search);
 const abonnement = params.get("abo");
 
@@ -28,3 +28,37 @@ if (abonnement === "digital") {
   rabatPrice.innerHTML = "99,00";
   totalPrice.innerHTML = "0,00";
 }
+
+// Validation
+const email = document.querySelector("#email");
+const email2 = document.querySelector("#email2");
+const password = document.querySelector("#password");
+const password2 = document.querySelector("#password2");
+
+const validate = () => {
+  // Emails matching
+  if (email.value !== email2.value) {
+    email2.setCustomValidity("Emails must be the same!");
+  } else {
+    email2.setCustomValidity("");
+  }
+
+  // Password length
+  if (password.value.length < 8) {
+    console.log(password.value.length);
+    password.setCustomValidity("Password is too short. Minimum 8 characters!");
+  } else {
+    password.setCustomValidity("");
+  }
+
+  // Passwords matching
+  if (password.value !== password2.value) {
+    password2.setCustomValidity("Password must be the same!");
+  } else {
+    password2.setCustomValidity("");
+  }
+};
+
+[email, email2, password, password2].forEach((selector) => {
+  selector.addEventListener("input", validate);
+});
