@@ -1,13 +1,16 @@
 # TODO
 
-General: - HTML/CSS Validation
+General: 
+    - HTML/CSS Validation
 
 Index:
 
-Sport: - Drag and slide on slideshow for mobile ( ? )
+Sport: 
 
-Abonnement-payment: - Form validation ( JS ) - Links to the "Thank you page"
+Abonnement-payment:
+    - Form validation ( JS )
 
-Abonnement-tak:
+Abonnement-final:
 
-Extra: - Backend for the abonnement (express.js ?)
+Extra: 
+    - Backend for the abonnement (express.js ?)
