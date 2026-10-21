@@ -63,6 +63,5 @@ const validate = () => {
   selector.addEventListener("input", validate);
 });
 
-// Submit with backend
 
 
