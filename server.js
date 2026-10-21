@@ -51,12 +51,11 @@ app.post("/register", async (req, res) => {
     res.redirect("/abonnement-final.html?name=" + name);
   } catch (err) {
     if (err.code === "SQLITE_CONSTRAINT_UNIQUE") {
-      return res
-        .status(409)
-        .json({ ok: false, error: "Email already registered" });
+      const error = encodeURIComponent("Email is already in our database")
+    res.redirect("/abonnement-final.html?error=email");
     }
     console.error(err);
-    res.status(500).json({ ok: false, error: "Server error" });
+    res.redirect("/abonnement-final.html?error=server");
   }
 });
 
