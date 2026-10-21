@@ -65,20 +65,4 @@ const validate = () => {
 
 // Submit with backend
 
-const form = document.querySelector("form");
 
-form.addEventListener("submit", (e) => handleSubmit(e));
-
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  const res = await fetch("/submit", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ fornavn, email }), // your form values
-  });
-
-  if (res.ok) {
-    console.log("test");
-  }
-};

@@ -5,11 +5,12 @@ const app = express();
 app.use(express.static("public"));
 
 app.use(express.json());
+app.use(express.urlencoded({extended: true}))
 
 app.post("/submit", (req, res) => {
-  const { fornavn, email } = req.body;
+  console.log(req.body);
 
-  if (!name || !email) {
+  if (req.body.lenght === 0) {
     return res.status(400).json({ ok: false, error: "Missing fields" });
   }
 
