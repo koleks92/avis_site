@@ -14,6 +14,22 @@ app.use(express.static("public"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Create table on first run
+db.exec(`
+  CREATE TABLE IF NOT EXISTS abonnenter (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    email TEXT NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    fornavn TEXT NOT NULL,
+    efternavn TEXT NOT NULL,
+    telefon TEXT,
+    adresse TEXT,
+    postnummer TEXT,
+    bynavn TEXT,
+    abonnement TEXT
+  )
+`);
+
 // Prepare for database insert
 const insert = db.prepare(`
   INSERT INTO abonnenter
@@ -47,13 +63,15 @@ app.post("/register", async (req, res) => {
       abonnement: req.body.abonnement || null,
     });
 
+    // Redirect with name
     const name = encodeURIComponent(fornavn)
     res.redirect("/abonnement-final.html?name=" + name);
   } catch (err) {
+    // Email exists error
     if (err.code === "SQLITE_CONSTRAINT_UNIQUE") {
-      const error = encodeURIComponent("Email is already in our database")
     res.redirect("/abonnement-final.html?error=email");
     }
+    // Server error
     console.error(err);
     res.redirect("/abonnement-final.html?error=server");
   }

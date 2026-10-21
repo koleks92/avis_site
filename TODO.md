@@ -10,4 +10,6 @@ Abonnement-payment:
 
 Abonnement-final:
 
-Extra: - Backend for the abonnement (work in progress)
+Backend: 
+- Add abonnement type to the dabase data
+
