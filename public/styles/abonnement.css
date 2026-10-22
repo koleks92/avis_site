@@ -4,6 +4,59 @@ main {
   padding: 0rem 2rem;
 }
 
+/* Log In Form */
+main form {
+  background-color: var(--gray);
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem;
+  margin: 2rem auto;
+  min-width: 300px;
+  max-width: 450px;
+  width: 100%;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  line-height: 28px;
+}
+
+.row label {
+  justify-self: start;
+  font-size: 1.1rem;
+}
+
+.row input {
+  border: none;
+  background-color: white;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  padding-left: 0.5rem;
+}
+
+.req {
+  color: red;
+  margin: 0.5rem;
+}
+
+button {
+  color: var(--white);
+  background-color: var(--red);
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: 1rem;
+  width: 50%;
+  justify-self: center;
+}
+
+/* Abonnements */
+
 h1 {
   margin: 2rem 0;
   font-size: 2.5rem;

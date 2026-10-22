@@ -37,6 +37,21 @@
       </header>
       <!-- MAIN -->
       <main>
+        <form action="/login" method="post" id="login">
+          <div class="row">
+            <label for="email"
+              >Indtast din email<span class="req">*</span></label
+            >
+            <input type="email" id="email" name="email" required />
+          </div>
+          <div class="row">
+            <label for="password"
+              >Indtast dit adgangskode<span class="req">*</span></label
+            >
+            <input type="password" id="password" name="password" required />
+          </div>
+          <button type="submit">Log In</button>
+        </form>
         <h1>Prøv iKøbenhavn gratis i 3 måneder</h1>
         <section id="abonnements">
           <div class="abonnement">
