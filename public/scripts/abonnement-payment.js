@@ -6,6 +6,9 @@ const nameAbo = document.querySelector("#abonnement_name");
 const normalPrice = document.querySelector("#normal_price");
 const rabatPrice = document.querySelector("#rabat_price");
 const totalPrice = document.querySelector("#total_price");
+const abonnementInput = document.querySelector("#abonnement_type");
+
+abonnementInput.setAttribute("value", abonnement);
 
 if (abonnement === "digital") {
   nameAbo.innerHTML = "Digital";
@@ -62,6 +65,3 @@ const validate = () => {
 [email, email2, password, password2].forEach((selector) => {
   selector.addEventListener("input", validate);
 });
-
-
-

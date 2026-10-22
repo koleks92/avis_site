@@ -60,16 +60,16 @@ app.post("/register", async (req, res) => {
       adresse: req.body.adresse || null,
       postnummer: req.body.postnummer || null,
       bynavn: req.body.bynavn || null,
-      abonnement: req.body.abonnement || null,
+      abonnement: req.body.abonnement_type || null,
     });
 
     // Redirect with name
-    const name = encodeURIComponent(fornavn)
+    const name = encodeURIComponent(fornavn);
     res.redirect("/abonnement-final.html?name=" + name);
   } catch (err) {
     // Email exists error
     if (err.code === "SQLITE_CONSTRAINT_UNIQUE") {
-    res.redirect("/abonnement-final.html?error=email");
+      res.redirect("/abonnement-final.html?error=email");
     }
     // Server error
     console.error(err);
