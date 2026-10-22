@@ -11,3 +11,22 @@ button.addEventListener("click", (event) => {
   nav_links.classList.toggle("active");
   logo.classList.toggle("active");
 });
+
+// Signed/Not signed in
+const link = document.querySelector("#login_link");
+
+const logged = async () => {
+  const res = await fetch("/me");
+
+  return res.ok;
+};
+
+const isLoggedIn = await logged();
+
+if (isLoggedIn) {
+  link.textContent = "LOG OUT";
+  link.setAttribute("href", "logout.html");
+} else {
+  link.textContent = "LOG IN/ABONNEMENT";
+  link.setAttribute("href", "abonnement.html");
+}

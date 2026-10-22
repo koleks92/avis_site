@@ -8,8 +8,8 @@
       src="https://kit.fontawesome.com/01ed1881ad.js"
       crossorigin="anonymous"
     ></script>
-    <script src="scripts/standard.js" defer></script>
-        <script src="scripts/login.js" defer></script>
+    <script type="module" src="scripts/standard.js" defer></script>
+    <script src="scripts/login.js" defer></script>
 
     <title>Avis Site</title>
   </head>
@@ -31,9 +31,14 @@
             <a href="sport.html" data-title="SPORT">SPORT</a>
             <a href="fake_link.html" data-title="KULTUR">KULTUR</a>
             <a href="fake_link.html" data-title="BEGIVENHEDER">BEGIVENHEDER</a>
-            <a class="active" href="abonnement.html" data-title="ABONNEMENT"
-              >LOG IN/ABONNEMENT</a
+            <a
+              class="active"
+              href="abonnement.html"
+              data-title="ABONNEMENT"
+              id="login_link"
             >
+              LOG IN/ABONNEMENT
+            </a>
           </div>
         </nav>
       </header>

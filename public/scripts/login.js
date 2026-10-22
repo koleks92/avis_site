@@ -12,7 +12,7 @@ form.addEventListener("submit", async (e) => {
   const data = await res.json();
 
   if (data.ok) {
-    message.textContent = "Ok";
+    window.location.replace("/");
   } else if (data.error == "Password") {
     message.textContent = "Wrong password";
   } else if (data.error == "User") {

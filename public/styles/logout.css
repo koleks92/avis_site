@@ -1,0 +1,18 @@
+@import url("standard.css");
+main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+#seconds {
+  margin-top: 2rem;
+}
+
+/* TABLET */
+@media only screen and (min-width: 800px) {
+}
+/* DESKTOP */
+@media only screen and (min-width: 1000px) {
+}

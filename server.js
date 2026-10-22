@@ -132,12 +132,24 @@ app.post("/login", async (req, res) => {
   }
 });
 
+// Log out
+app.post("/logout", (req, res) => {
+  req.session.destroy((err) => {
+    if (err) {
+      return res.status(500).json({ error: "Session error" });
+    } else {
+      res.clearCookie("connect.sid");
+      return res.status(200).json({ ok: true });
+    }
+  });
+});
+
 // Me page
 app.get("/me", (req, res) => {
   if (req.session.userId) {
-    res.status(200).json({ status: "signed" });
+    res.status(200).json({ ok: true });
   } else {
-    res.status(400).json({ status: "not_signed" });
+    res.status(400).json({ ok: false });
   }
 });
 
