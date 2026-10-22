@@ -9,6 +9,8 @@
       crossorigin="anonymous"
     ></script>
     <script src="scripts/burger.js" defer></script>
+        <script src="scripts/login.js" defer></script>
+
     <title>Avis Site</title>
   </head>
   <body>
@@ -37,7 +39,7 @@
       </header>
       <!-- MAIN -->
       <main>
-        <form action="/login" method="post" id="login">
+        <form id="login">
           <div class="row">
             <label for="email"
               >Indtast din email<span class="req">*</span></label
@@ -50,6 +52,7 @@
             >
             <input type="password" id="password" name="password" required />
           </div>
+          <p id="message"></p>
           <button type="submit">Log In</button>
         </form>
         <h1>Prøv iKøbenhavn gratis i 3 måneder</h1>

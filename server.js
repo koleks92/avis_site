@@ -77,4 +77,35 @@ app.post("/register", async (req, res) => {
   }
 });
 
+// Log In form
+app.post("/login", async (req, res) => {
+  const { email, password } = req.body;
+
+  if (!email || !password) {
+    return res.status(400).json({ ok: false, error: "Missing fields" });
+  }
+
+  try {
+    const user = db
+      .prepare(`SELECT email, password FROM abonnenter WHERE email = ?`)
+      .get(email);
+
+    // If no user with given email
+    if (!user) {
+      return res.status(400).json({ error: "User" });
+    }
+
+    // Check password
+    const result = await bcrypt.compare(password, user.password);
+
+    if (result) {
+      return res.status(400).json({ ok: true });
+    } else {
+      return res.status(400).json({ error: "Password" });
+    }
+  } catch (err) {
+    return res.status(400).json({ error: "Server error" });
+  }
+});
+
 app.listen(3000);
