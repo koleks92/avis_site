@@ -135,9 +135,9 @@ app.post("/login", async (req, res) => {
 // Me page
 app.get("/me", (req, res) => {
   if (req.session.userId) {
-    res.status(200).json({ status: "ok" });
+    res.status(200).json({ status: "signed" });
   } else {
-    res.status(400).json({ status: "not okey" });
+    res.status(400).json({ status: "not_signed" });
   }
 });
 
