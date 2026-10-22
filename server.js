@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const bcrypt = require("bcrypt");
 const Database = require("better-sqlite3");
+const session = require("express-session");
+require("dotenv").config();
 
 // Database connection
 const db = new Database("database.db");
@@ -13,6 +15,21 @@ app.use(express.static("public"));
 // Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Session
+app.use(
+  session({
+    secret: process.env.SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      httpOnly: true,
+      sameSite: "lax",
+      secure: false,
+      maxAge: 1000 * 60 * 60 * 24,
+    },
+  }),
+);
 
 // Create table on first run
 db.exec(`
@@ -38,7 +55,7 @@ const insert = db.prepare(`
     (@email, @password, @fornavn, @efternavn, @telefon, @adresse, @postnummer, @bynavn, @abonnement)
 `);
 
-// Submit form
+// Register form
 app.post("/register", async (req, res) => {
   const { email, password, fornavn, efternavn } = req.body;
 
@@ -87,7 +104,7 @@ app.post("/login", async (req, res) => {
 
   try {
     const user = db
-      .prepare(`SELECT email, password FROM abonnenter WHERE email = ?`)
+      .prepare(`SELECT id, email, password FROM abonnenter WHERE email = ?`)
       .get(email);
 
     // If no user with given email
@@ -99,12 +116,28 @@ app.post("/login", async (req, res) => {
     const result = await bcrypt.compare(password, user.password);
 
     if (result) {
-      return res.status(400).json({ ok: true });
+      req.session.regenerate((err) => {
+        if (err) {
+          return res.status(500).json({ error: "Session error" });
+        } else {
+          req.session.userId = user.id;
+          return res.status(200).json({ ok: true });
+        }
+      });
     } else {
       return res.status(400).json({ error: "Password" });
     }
   } catch (err) {
-    return res.status(400).json({ error: "Server error" });
+    return res.status(500).json({ error: "Server error" });
+  }
+});
+
+// Me page
+app.get("/me", (req, res) => {
+  if (req.session.userId) {
+    res.status(200).json({ status: "ok" });
+  } else {
+    res.status(400).json({ status: "not okey" });
   }
 });
 
