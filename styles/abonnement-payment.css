@@ -8,7 +8,7 @@ main form {
   margin: 1rem 0.5rem 1rem;
 }
 
-main section {
+main section, #write_to_us {
   display: grid;
   gap: 0.5rem;
   padding: 1rem;
@@ -115,6 +115,10 @@ button, main a {
 }
 
 /* Skriv til os */
+#write_to_us {
+
+}
+
 #write_to_us p {
   font-size: 1.1rem;
   text-align: center;
