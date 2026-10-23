@@ -1,6 +1,6 @@
 # TODO
 
-General: - HTML/CSS Validation
+General: 
 
 Index:
 
