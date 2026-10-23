@@ -114,6 +114,33 @@ figure figcaption {
   right: 2%;
 }
 
+/* MODAL */
+#modal {
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 5%;
+  background-color: #000000aa;
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#modal section {
+  background-color: var(--white);
+  text-align: center;
+  padding: 5%;
+  border: 2%;
+}
+
 /* TABLET */
 @media only screen and (min-width: 800px) {
   .main_sport {
