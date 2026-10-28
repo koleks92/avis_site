@@ -35,7 +35,18 @@ const email2 = document.querySelector("#email2");
 const password = document.querySelector("#password");
 const password2 = document.querySelector("#password2");
 
+// regex for email
+const regxp_email =
+  /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
 const validate = () => {
+  // Email valid
+  if (!regxp_email.test(f.target.email1.value)) {
+    email.setCustomValidity("Email must be valid!");
+  } else {
+    email.setCustomValidity("");
+  }
+
   // Emails matching
   if (email.value !== email2.value) {
     email2.setCustomValidity("Emails must be the same!");
