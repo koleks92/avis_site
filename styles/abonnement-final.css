@@ -35,6 +35,12 @@ main a {
 
 /* Skriv til os */
 #write_to_us {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
   margin: 1rem 2rem;
 }
 #write_to_us p {
@@ -44,6 +50,7 @@ main a {
 
 #write_to_us a {
   font-size: 1.2rem;
+  max-width: 100%;
   font-weight: 500;
 }
 
