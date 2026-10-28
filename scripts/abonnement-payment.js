@@ -40,8 +40,10 @@ const regxp_email =
   /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
 const validate = () => {
+
+
   // Email valid
-  if (!regxp_email.test(f.target.email1.value)) {
+  if (!regxp_email.test(email.value)) {
     email.setCustomValidity("Email must be valid!");
   } else {
     email.setCustomValidity("");
