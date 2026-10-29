@@ -69,43 +69,47 @@
           <button type="submit" form="abonnement">Bestil</button>
         </section>
         <!-- Form -->
-        <form action="abonnement-confirmation.html" method="get" id="abonnement">
+        <form
+          action="abonnement-confirmation.html"
+          method="get"
+          id="abonnement"
+        >
           <div class="row">
             <label for="email"
               >Indtast din email<span class="req">*</span></label
             >
-            <input type="email" id="email" name="email" required />
+            <input type="email" id="email" name="email" />
           </div>
 
           <div class="row">
             <label for="email2"
               >Bekræft din email<span class="req">*</span></label
             >
-            <input type="email" id="email2" name="email2" required />
+            <input type="email" id="email2" name="email2" />
           </div>
 
           <div class="row">
             <label for="password"
               >Vælg adgangskode<span class="req">*</span></label
             >
-            <input type="password" id="password" name="password" required />
+            <input type="password" id="password" name="password" />
           </div>
 
           <div class="row">
             <label for="password2"
               >Bekræft koden<span class="req">*</span></label
             >
-            <input type="password" id="password2" name="password2" required />
+            <input type="password" id="password2" name="password2" />
           </div>
 
           <div class="row">
             <label for="fornavn">Fornavn<span class="req">*</span></label>
-            <input type="text" id="fornavn" name="fornavn" required />
+            <input type="text" id="fornavn" name="fornavn" />
           </div>
 
           <div class="row">
             <label for="efternavn">Efternavn<span class="req">*</span></label>
-            <input type="text" id="efternavn" name="efternavn" required />
+            <input type="text" id="efternavn" name="efternavn" />
           </div>
 
           <div class="row">
@@ -114,32 +118,23 @@
               type="tel"
               id="telefon"
               name="telefon"
-              required
-              pattern="(\+45)?\s?\d{8}"
               title="8 cifre, fx 12345678"
             />
           </div>
 
           <div class="row">
             <label for="adresse">Adresse<span class="req">*</span></label>
-            <input type="text" id="adresse" name="adresse" required />
+            <input type="text" id="adresse" name="adresse" />
           </div>
 
           <div class="row">
             <label for="post">Post<span class="req">*</span></label>
-            <input
-              type="number"
-              id="post"
-              name="post"
-              required
-              min="1000"
-              max="9999"
-            />
+            <input type="number" id="post" name="post" />
           </div>
 
           <div class="row">
             <label for="by">By<span class="req">*</span></label>
-            <input type="text" id="by" name="by" required />
+            <input type="text" id="by" name="by" />
           </div>
           <div class="row">
             <div class="check">
@@ -163,7 +158,7 @@
 
           <div class="row">
             <div class="check">
-              <input type="checkbox" id="vilkar" name="vilkar" required />
+              <input type="checkbox" id="vilkar" name="vilkar" />
               <label for="vilkar">
                 Jeg accepterer Dagbladet Informations produktvilkår
                 <span class="req">*</span>

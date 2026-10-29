@@ -30,48 +30,84 @@ if (abonnement === "digital") {
 }
 
 // Validation
-const email = document.querySelector("#email");
-const email2 = document.querySelector("#email2");
-const password = document.querySelector("#password");
-const password2 = document.querySelector("#password2");
+const form = document.querySelector("#abonnement");
 
-// regex for email
+// regex
 const regxp_email =
   /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 
+const regxp_tel = /^(?:\+45)?\s?\d{8}$/;
+
 const validate = () => {
+  const {
+    email,
+    email2,
+    password,
+    password2,
+    fornavn,
+    efternavn,
+    telefon,
+    adresse,
+    post,
+    by,
+  } = form;
 
+  // Email
+  email.setCustomValidity(
+    !regxp_email.test(email.value) ? "Email must be valid!" : "",
+  );
 
-  // Email valid
-  if (!regxp_email.test(email.value)) {
-    email.setCustomValidity("Email must be valid!");
-  } else {
-    email.setCustomValidity("");
-  }
+  email2.setCustomValidity(
+    email.value !== email2.value ? "Emails must be the same!" : "",
+  );
 
-  // Emails matching
-  if (email.value !== email2.value) {
-    email2.setCustomValidity("Emails must be the same!");
-  } else {
-    email2.setCustomValidity("");
-  }
+  // Password
+  password.setCustomValidity(
+    password.value.length < 8
+      ? "Password is too short. Minimum 8 characters!"
+      : "",
+  );
 
-  // Password length
-  if (password.value.length < 8) {
-    console.log(password.value.length);
-    password.setCustomValidity("Password is too short. Minimum 8 characters!");
-  } else {
-    password.setCustomValidity("");
-  }
+  password2.setCustomValidity(
+    password.value !== password2.value ? "Passwords must be the same!" : "",
+  );
 
-  // Passwords matching
-  if (password.value !== password2.value) {
-    password2.setCustomValidity("Password must be the same!");
-  } else {
-    password2.setCustomValidity("");
-  }
+  // Names
+  fornavn.setCustomValidity(fornavn.value === "" ? "Missing fornavn!" : "");
+  efternavn.setCustomValidity(
+    efternavn.value === "" ? "Missing efternavn!" : "",
+  );
+
+  // Phone
+  telefon.setCustomValidity(
+    telefon.value === ""
+      ? "Missing telefon number!"
+      : !regxp_tel.test(telefon.value)
+        ? "Phone number must be valid!"
+        : "",
+  );
+
+  // Addres
+  adresse.setCustomValidity(adresse.value === "" ? "Missing adresse!" : "");
+
+  // Post number
+  const postNumber = Number(post.value);
+  post.setCustomValidity(
+    post.value === ""
+      ? "Missing post!"
+      : postNumber < 1000 || postNumber > 9999
+        ? "Post number should be between 1000 and 9999"
+        : "",
+  );
+
+  // City by
+  by.setCustomValidity(by.value === "" ? "Missing by!" : "");
 };
 
-[email, email2, password, password2].forEach((selector) => {
-  selector.addEventListener("input", validate);
-});
+form.addEventListener("input", validate);
+
+// More info
+
+// form.addEventListener("submit", validate);
+// If using 'submit' remeber preventDefault() !
+// insted setCustomValidity should be reportValidity or just message in the html
