@@ -25,6 +25,12 @@
   margin: 1rem 2rem 2rem;
 }
 
+main > section,
+main > div {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .text_sport h2,
 .text_sport h3 {
   margin: 0.5rem 0;
