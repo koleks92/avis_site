@@ -100,14 +100,21 @@ const validate = () => {
         : "",
   );
 
-  // City by
+  // City / by
   by.setCustomValidity(by.value === "" ? "Missing by!" : "");
 };
 
 form.addEventListener("input", validate);
 
-// More info
+// Runs when the browser lets the submit through
+form.addEventListener("submit", (e) => {
+  validate();
 
-// form.addEventListener("submit", validate);
-// If using 'submit' remeber preventDefault() !
-// insted setCustomValidity should be reportValidity or just message in the html
+  if (!form.checkValidity()) {
+    // Stop the submit
+    e.preventDefault(); 
+    // Show the error 
+    form.reportValidity();
+  }
+});
+
